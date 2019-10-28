@@ -1,4 +1,13 @@
 language: node_js
-script: "yarn test"
+addons:
+  chrome: stable
 node_js:
-  - "8.10.0"
+  - "9"
+install:
+  - npm install
+after_success:
+  - npm run coveralls
+script:
+  - npm run build
+  - npm run test
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then npm run prepare:integration && npm run test:integration; fi'

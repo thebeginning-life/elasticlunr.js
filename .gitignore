@@ -2,3 +2,10 @@
 .DS_Store
 .DS_Store?
 /node_modules
+elasticlunr.es.js
+elasticlunr.min.js
+yarn.lock
+package-lock.json
+integration/*/src/node_modules
+integration/*/src/.cache
+integration/*/src/public

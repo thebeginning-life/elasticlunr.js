@@ -1,8 +1,9 @@
 # Elasticlunr.js
 
-[![Build Status](https://travis-ci.org/weixsong/elasticlunr.js.svg?branch=master)](https://travis-ci.org/weixsong/elasticlunr.js)
-[![npm version](https://badge.fury.io/js/elasticlunr.svg)](https://badge.fury.io/js/elasticlunr)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/weixsong/elasticlunr.js/master/LICENSE)
+**Production**: [![npm version](https://badge.fury.io/js/elasticlunr.svg)](https://badge.fury.io/js/elasticlunr) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/weixsong/elasticlunr.js/master/LICENSE)
+
+**Development**: [![Build Status](https://travis-ci.com/srenauld/elasticlunr.js.svg?branch=dev)](https://travis-ci.com/srenauld/elasticlunr.js) [![Coverage Status](https://coveralls.io/repos/github/srenauld/elasticlunr.js/badge.svg?branch=dev)](https://coveralls.io/github/srenauld/elasticlunr.js?branch=dev)
+
 [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badge/)
 
 # Contributor Welcome!!!
