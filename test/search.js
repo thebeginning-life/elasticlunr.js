@@ -165,10 +165,10 @@ describe('elastic-like DSL', function() {
         }
       });
       assert.equal(results.length, 2);
-      assert.equal(results[0].ref, 'a');
-      assert.equal(results[1].ref, 'b');
-      assert.equal(idx.highlight(results[0].ref, results[0].positions)('<i>', '</i>').body, "Mr. Green killed Colonel Mustard in the <i>study</i> with the candlestick. Mr. Green is not a very nice fellow.");
-      assert.equal(idx.highlight(results[1].ref, results[1].positions)('<i>', '</i>').body, "Professor Plumb has a green plant in his <i>study</i>");
+      assert.equal(results[0].ref, 'b');
+      assert.equal(results[1].ref, 'a');
+      assert.equal(idx.highlight(results[1].ref, results[1].positions)('<i>', '</i>').body, "Mr. Green killed Colonel Mustard in the <i>study</i> with the candlestick. Mr. Green is not a very nice fellow.");
+      assert.equal(idx.highlight(results[0].ref, results[0].positions)('<i>', '</i>').body, "Professor Plumb has a green plant in his <i>study</i>");
     })
   })
   describe('bool query', () => {
