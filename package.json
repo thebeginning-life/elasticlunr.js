@@ -89,6 +89,8 @@
   },
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha -R spec",
+    "prepare:integration": "cross-env node integration/prepare.js",
+    "test:integration": "cross-env jest",
     "build": "cross-env NODE_ENV=production rollup -c"
   },
   "dependencies": {

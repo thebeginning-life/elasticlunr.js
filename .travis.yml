@@ -1,4 +1,9 @@
 language: node_js
-script: "yarn test"
+addons:
+  chrome: stable
 node_js:
-  - "8.10.0"
+  - "9"
+install:
+  - npm run install
+script:
+  - npm run test
