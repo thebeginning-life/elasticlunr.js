@@ -3,6 +3,7 @@ addons:
   chrome: stable
 node_js:
   - "9"
+  - "12"
 install:
   - npm install
 after_success:
