@@ -63,7 +63,6 @@
     "coveralls": "^3.0.7",
     "cross-env": "^5.2.0",
     "doxx": "1.4.0",
-    "elasticlunr": "0.9.5",
     "eslint": "^5.0.1",
     "eslint-loader": "^2.0.0",
     "jest": "^24.9.0",
