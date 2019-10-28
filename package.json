@@ -60,6 +60,7 @@
     "babel-register": "^7.0.0-beta.3",
     "benchmark": "^2.1.4",
     "chai": "^4.2.0",
+    "coveralls": "^3.0.7",
     "cross-env": "^5.2.0",
     "doxx": "1.4.0",
     "elasticlunr": "0.9.5",
@@ -89,6 +90,7 @@
   },
   "scripts": {
     "test": "cross-env NODE_ENV=test nyc mocha -R spec",
+    "coveralls": "cross-env NODE_ENV=test nyc report --reporter=text-lcov | coveralls",
     "prepare:integration": "cross-env node integration/prepare.js",
     "test:integration": "cross-env jest",
     "build": "cross-env NODE_ENV=production rollup -c"
