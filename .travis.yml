@@ -4,6 +4,6 @@ addons:
 node_js:
   - "9"
 install:
-  - npm run install
+  - npm install
 script:
   - npm run test
