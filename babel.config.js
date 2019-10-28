@@ -3,7 +3,7 @@ module.exports = {
   "plugins": ["babel-plugin-add-module-exports"],
   "env": {
     "test": {
-      "plugins": ["istanbul"]
+      "plugins": ["istanbul", "@babel/plugin-transform-runtime"]
     }
   }
 };
