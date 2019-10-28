@@ -39,6 +39,16 @@ describe('elasticlunr.Index', function() {
     idx.setRef('foo');
     assert.deepEqual(idx.getRef(), 'foo');
   });
+  it('Should save all fields by default', () => {
+    var idx = new elasticlunr.Index();
+    var doc = {
+      id: 1,
+      body: 'this is a test'
+    };
+    idx.addDoc(doc);
+    let newDoc = idx.getDoc(1);
+    assert.equal(newDoc.body, "this is a test");
+  });
   it('should allow the addition of documents', () => {
     var idx = new elasticlunr.Index();
     var addSpy = sinon.spy();
@@ -98,13 +108,13 @@ describe('elasticlunr.Index', function() {
                 2: {tf: 1}};
   
     idx.addField('body');
-    assert.equal(idx.documentStore.length, 0);
+    assert.equal(idx.documentStore.size(), 0);
   
     idx.addDoc(doc1);
-    assert.equal(idx.documentStore.length, 1);
+    assert.equal(idx.documentStore.size(), 1);
   
     idx.addDoc(doc2);
-    assert.equal(idx.documentStore.length, 2);
+    assert.equal(idx.documentStore.size(), 2);
   
     assert.deepEqual(idx.getField('body').getToken('this').documents, ['1', '2']);
   
@@ -112,7 +122,7 @@ describe('elasticlunr.Index', function() {
     assert.equal(idx.removeDocByRef("test"), null);
     assert.equal(idx.removeDoc(), null);
     idx.removeDoc(doc1);
-    assert.equal(idx.documentStore.length, 1);
+    assert.equal(idx.documentStore.size(), 1);
     assert.equal(idx.getField('body').hasToken('this'), true);
     assert.equal(idx.getField('body').hasToken('test'), false);
     assert.equal(idx.getField('body').hasToken('apple'), true);
@@ -166,13 +176,13 @@ describe('elasticlunr.Index', function() {
   
     idx.addField('body')
     idx.addDoc(doc)
-    assert.equal(idx.documentStore.length, 1)
+    assert.equal(idx.documentStore.size(), 1)
     assert.ok(idx.getField('body').hasToken('foo'))
   
     doc.body = 'bar'
     idx.updateDoc(doc)
   
-    assert.equal(idx.documentStore.length, 1)
+    assert.equal(idx.documentStore.size(), 1)
     assert.ok(idx.getField('body').hasToken('bar'))
   })
   
@@ -206,7 +216,7 @@ describe('elasticlunr.Index', function() {
   
     idx.addField('body')
     idx.addDoc(doc)
-    assert.equal(idx.documentStore.length, 1)
+    assert.equal(idx.documentStore.size(), 1)
     assert.ok(idx.getField('body').hasToken('foo'))
   
     var addSpy = sinon.spy(),
@@ -231,7 +241,7 @@ describe('elasticlunr.Index', function() {
   
     idx.addField('body');
     idx.addDoc(doc);
-    assert.equal(idx.documentStore.length, 1);
+    assert.equal(idx.documentStore.size(), 1);
     assert.ok(idx.getField('body').hasToken('foo'));
   
     var updateSpy = sinon.spy();
