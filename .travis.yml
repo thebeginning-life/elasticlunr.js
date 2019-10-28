@@ -6,5 +6,6 @@ node_js:
 install:
   - npm install
 script:
+  - npm run build
   - npm run test
   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then npm run prepare:integration && npm run test:integration; fi'
