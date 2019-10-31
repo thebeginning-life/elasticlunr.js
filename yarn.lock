@@ -4981,9 +4981,9 @@ lru-cache@^5.1.1:
     yallist "^3.0.2"
 
 lunr-languages@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/lunr-languages/-/lunr-languages-1.1.0.tgz#d4debe5cccc00aa373fac4051127a2a5ea0ce0ca"
-  integrity sha512-53pTQX8jkjZBWSPJa/+3UJyIPcGmeWWwqS4RRr5GxhRilqL9tv/Vuj7Vb1Nz3Dtz2HTK2Pdmrf3zevHS/ZycjQ==
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/lunr-languages/-/lunr-languages-1.4.0.tgz#42abb12aa81447d1ece5aa35676adcdf40a3e8a8"
+  integrity sha512-YWfZDExJN/MJEVE/DbM4AuVRLsqeHi+q3wmECMsWjGIOkd5mr9DUNos7fv8f5do9VLRMYXIzFjn+N4+KPI9pQA==
 
 lunr@^2.3.6:
   version "2.3.6"
